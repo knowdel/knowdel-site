@@ -1,4 +1,4 @@
-import { Mic, ExternalLink, Code, Cloud, Brain, FileText, Zap, Download } from 'lucide-react'
+import { Mic, ExternalLink, Code, Cloud, Brain, FileText, Zap, Download, Smartphone, Award } from 'lucide-react'
 
 export default function WorkSection() {
   const products = [
@@ -94,6 +94,147 @@ export default function WorkSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-text-brand-dark mb-4">プロダクト</h2>
           <p className="text-lg text-text-dark">私たちが開発する革新的なアプリケーション</p>
+        </div>
+        
+        {/* 制作実績セクション */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-text-brand-dark mb-4 flex items-center justify-center">
+              <Award className="w-8 h-8 mr-3 text-brand" />
+              制作実績
+            </h3>
+            <p className="text-lg text-text-dark">お客様と共に創り上げたプロダクト</p>
+          </div>
+          
+          {/* KTGS合同会社 ボイテキ！クライアント */}
+          <div className="bg-gradient-to-r from-brand/5 to-accent-gold/5 rounded-2xl shadow-lg overflow-hidden border border-brand/20">
+            <div className="bg-gradient-to-r from-brand to-brand-dark p-8 text-white">
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-white/20 rounded-full mr-6">
+                  <Smartphone className="w-12 h-12" />
+                </div>
+                <div>
+                  <h4 className="text-3xl font-bold mb-2">ボイテキ！クライアント</h4>
+                  <p className="text-xl text-white/90">iPhoneアプリ開発実績</p>
+                  <p className="text-sm text-white/80 mt-2">クライアント: ケーティージーエス合同会社</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                    <span className="bg-accent-gold text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      iOS APP
+                    </span>
+                    <a 
+                      href="https://www.voitex.site/news/voitex-iphone-app-voitexclient-official-release"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                    >
+                      リリース記事
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+            </div>
+            
+            <div className="p-8">
+              <div className="grid lg:grid-cols-2 gap-8">
+                <div>
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">プロジェクト概要</h5>
+                  <p className="text-text-dark mb-6 leading-relaxed">
+                    対面商談での音声記録を簡単にし、営業活動の効率化を支援する専用iPhoneアプリ「ボイテキ！クライアント」の開発を担当。Appleの審査を通過し、App Storeで正式リリースされました。
+                  </p>
+                  
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">主な機能</h5>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      ワンタップで録音開始・停止
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      録音前の承諾確認機能
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      高品質WAV形式での録音
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      ボイテキ！への自動アップロード
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      録音内容の即座再生機能
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">技術スタック</h5>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Smartphone className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">iOS Native</h6>
+                      <p className="text-xs text-text-dark">Swift開発</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Mic className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">音声録音</h6>
+                      <p className="text-xs text-text-dark">AVAudioEngine</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Cloud className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">クラウド連携</h6>
+                      <p className="text-xs text-text-dark">API連携</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Award className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">App Store</h6>
+                      <p className="text-xs text-text-dark">審査通過</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="https://www.voitex.site/news/voitex-iphone-app-voitexclient-official-release"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex items-center justify-center"
+                  >
+                    リリース記事を見る
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                  <a 
+                    href="https://forms.gle/tjA7ix7Ky5MsGqiU9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                  >
+                    アプリ開発について相談する
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div className="space-y-12">
