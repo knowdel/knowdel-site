@@ -18,7 +18,7 @@
     "autoprefixer": "^10.0.1",
     "clsx": "^2.0.0",
     "lucide-react": "^0.294.0",
-    "next": "14.0.4",
+    "next": "15.5.7",
     "nodemailer": "^7.0.6",
     "postcss": "^8",
     "react": "^18",
@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "15.5.7"
   }
 }
