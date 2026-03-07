@@ -4,6 +4,16 @@ import { Calendar, ArrowLeft, Newspaper, Clock, Tag } from 'lucide-react'
 export default function News() {
   const news = [
     {
+      id: 3,
+      title: 'クローズドネットワーク環境でのRAG型AI基盤の構築を開始',
+      date: '2026.03.07',
+      category: 'お知らせ',
+      content: '株式会社ノウデルでは、クローズドネットワーク環境で利用可能なRAG型AI基盤の構築に取り組んでいます。',
+      excerpt: '株式会社ノウデルでは、社内データを外部に送信せず、セキュリティ要件を満たしたクローズド環境でのRAG（Retrieval Augmented Generation）型AI基盤の構築を開始しています。社内ナレッジを活用するAIアシスタントの実現を目指します。',
+      readTime: '5分で読める',
+      featured: true
+    },
+    {
       id: 1,
       title: 'KTGS社「ボイテキ！クライアント」iPhoneアプリ正式リリース｜ノウデルが開発を担当',
       date: '2025.09.25',
@@ -11,7 +21,7 @@ export default function News() {
       content: '株式会社ノウデル（本社：東京都中野区）は、2025年9月25日にケーティージーエス合同会社（以下KTGS）より正式リリースされたiPhoneアプリ「ボイテキ！クライアント」の開発を担当いたしました。',
       excerpt: '株式会社ノウデル（本社：東京都中野区）は、2025年9月25日にケーティージーエス合同会社（以下KTGS）より正式リリースされたiPhoneアプリ「ボイテキ！クライアント」の開発を担当いたしました。対面商談での音声記録を簡単にし、営業活動の効率化を支援する専用アプリです。',
       readTime: '4分で読める',
-      featured: true
+      featured: false
     },
     {
       id: 2,

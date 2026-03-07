@@ -5,7 +5,7 @@ export default function CompanySection() {
     name: '株式会社ノウデル',
     founded: '2023年8月',
     ceo: '代表取締役 片ケ瀬敏夫',
-    address: '〒164-0003 東京都中野区東中野5-10-5 フォーカルビル4B',
+    address: '〒164-0001 東京都中野区中野4-6-10-102',
     phone: '050-8882-5857',
     business: 'アプリケーションソフトの企画、制作',
     mission: '学び。提供。それが株式会社ノウデル の使命です。',
@@ -15,9 +15,8 @@ export default function CompanySection() {
   }
 
   const access = [
-    'JR総武線 東中野駅徒歩6分',
-    '大江戸線 東中野駅徒歩12分',
-    '東西線 落合駅 徒歩5分'
+    'JR総武線　中野駅　北口 徒歩5分',
+    '東京メトロ　東西線　中野駅　北口 徒歩5分',
   ]
 
   return (
@@ -100,7 +99,7 @@ export default function CompanySection() {
               {/* Googleマップ */}
               <div className="mt-4">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1234567890123!2d139.686123456789!3d35.71234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzQ0LjQiTiAxMznCsDQxJzEwLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                  src={`https://maps.google.com/maps?output=embed&q=${encodeURIComponent(companyInfo.address)}&t=m&hl=ja&z=17`}
                   width="100%"
                   height="200"
                   style={{ border: 0 }}
