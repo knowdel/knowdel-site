@@ -4,6 +4,16 @@ import { Calendar, ArrowLeft, Newspaper, Clock, Tag } from 'lucide-react'
 export default function News() {
   const news = [
     {
+      id: 4,
+      title: 'クローズド環境で音声分析とAI基盤を連携させる取り組みを開始',
+      date: '2026.03.10',
+      category: 'お知らせ',
+      content: '株式会社ノウデルでは、RAG型AI基盤に加え、音声分析システム「ボイテキ２！」の設計を進めています。',
+      excerpt: 'クローズド環境で利用可能なRAG型AI基盤と、音声分析システム「ボイテキ２！」を同一環境で連携させる取り組みを開始。音声を社外に出さず、文字起こし・感情解析・要約までを社内で完結させる構成をご紹介します。',
+      readTime: '6分で読める',
+      featured: true
+    },
+    {
       id: 3,
       title: 'クローズドネットワーク環境でのRAG型AI基盤の構築を開始',
       date: '2026.03.07',
@@ -11,7 +21,7 @@ export default function News() {
       content: '株式会社ノウデルでは、クローズドネットワーク環境で利用可能なRAG型AI基盤の構築に取り組んでいます。',
       excerpt: '株式会社ノウデルでは、社内データを外部に送信せず、セキュリティ要件を満たしたクローズド環境でのRAG（Retrieval Augmented Generation）型AI基盤の構築を開始しています。社内ナレッジを活用するAIアシスタントの実現を目指します。',
       readTime: '5分で読める',
-      featured: true
+      featured: false
     },
     {
       id: 1,

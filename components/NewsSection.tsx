@@ -1,6 +1,13 @@
 export default function NewsSection() {
   const news = [
     {
+      id: 4,
+      title: 'クローズド環境で音声分析とAI基盤を連携させる取り組みを開始',
+      date: '2026.03.10',
+      category: 'お知らせ',
+      excerpt: 'RAG型AI基盤と音声分析「ボイテキ２！」を同一環境で連携。音声を社外に出さず、文字起こし・感情解析・要約を社内で完結させる取り組みをご紹介します。'
+    },
+    {
       id: 3,
       title: 'クローズドネットワーク環境でのRAG型AI基盤の構築を開始',
       date: '2026.03.07',

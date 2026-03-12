@@ -7,7 +7,8 @@ export async function generateStaticParams() {
   return [
     { id: '1' },
     { id: '2' },
-    { id: '3' }
+    { id: '3' },
+    { id: '4' }
   ]
 }
 
@@ -310,6 +311,117 @@ export default async function NewsArticle({ params }: { params: Promise<{ id: st
           <div class="bg-gradient-to-r from-brand to-brand-dark text-white rounded-lg p-6 my-8 text-center">
             <h3 class="text-lg font-semibold mb-2">お気軽にご相談ください</h3>
             <p class="text-white">クローズド環境でのAI基盤・RAGシステムのご検討は、ぜひお気軽にご相談ください。</p>
+            <a href="/contact" class="inline-block mt-4 bg-white text-brand font-semibold py-2 px-6 rounded-lg hover:bg-accent-gold transition-colors">お問い合わせ</a>
+          </div>
+        </div>
+      `
+    },
+    '4': {
+      id: 4,
+      title: 'クローズド環境で音声分析とAI基盤を連携させる取り組みを開始',
+      date: '2026.03.10',
+      category: 'お知らせ',
+      content: `
+        <div class="prose prose-lg max-w-none">
+          <p class="text-lg text-text-dark leading-relaxed mb-6">— 株式会社ノウデルのAI活用への取り組み —</p>
+          <p class="text-text-dark leading-relaxed mb-8">近年、ChatGPTをはじめとする大規模言語モデル（LLM）の活用が広がる一方で、コールセンターの通話や商談録音といった<strong>音声・会話データ</strong>をどう活用するかも、企業にとって重要なテーマになりつつあります。文字起こしや感情分析、要約・レポート生成までを社内で一気通貫で扱いたいというニーズは、とくに機密性の高い業種で強く聞かれます。</p>
+          <p class="text-text-dark leading-relaxed mb-8">しかし実際には、音声データの活用にあたって次のような課題があります。</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li>通話や商談音声を外部クラウドに送信できない</li>
+            <li>文字起こし・感情解析・要約までを社内で完結させたい</li>
+            <li>すでに稼働している社内のAI基盤（LLM・RAG・チャット）と連携させたい</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">こうした背景から、株式会社ノウデルでは、クローズドネットワーク環境で利用可能な<strong class="text-brand">RAG型AI基盤</strong>（<a href="/news/3" class="text-accent-gold hover:text-brand font-medium underline">前回ご紹介した取り組み</a>）に加え、<strong>音声分析システム「ボイテキ２！」の設計を進めています</strong>。今回は、既存のAI基盤と同じ環境で"同居"させる構成で、音声を社外に出さずに活用する取り組みの概要をご紹介します。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">ボイテキ２！</span>
+            音声分析システム「ボイテキ２！」とは
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">今回設計を進めているボイテキ２！は、オンプレミス環境で動作する音声分析システムです。処理の流れはおおまかに次のとおりです。</p>
+          <div class="bg-base-light-gray rounded-lg p-4 mb-6 font-mono text-sm text-center text-text-dark">
+            音声・動画の取り込み → 文字起こし（STT） → 感情解析（SER） → 発話と感情のマージ → 要約・レポート生成（LLM）
+          </div>
+          <ul class="list-disc pl-6 mb-6 space-y-2 text-text-dark">
+            <li>結果は<strong>解析一覧・詳細画面</strong>で確認でき、発話本文・感情の変化・音声再生を連動して確認できる構成を想定しています。</li>
+            <li>経営者・営業・品質管理・人事など<strong>役割ごとの視点（レンズ）</strong>で同じ解析結果を見られるようにし、業務に応じた活用を目指しています。</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">重要なのは、<strong>音声と解析結果をすべて社内に閉じたまま</strong>利用できる点です。機微な通話データをクラウドに送らず、社内のLLMやRAGと組み合わせて、要約やチャット検索までをクローズド環境で完結させることを目指しています。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">連携</span>
+            既存AI基盤との"同居"構成
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">当社では、LLM・RAG・チャットUIを備えた<strong>RAG型AI基盤（FUJI RAG）をすでにDockerで運用しています</strong>。今回のボイテキ２！は、その環境に新たに1システムとして相乗りさせる形で設計しました。</p>
+          <div class="space-y-6 mb-8">
+            <div class="bg-base-light-gray rounded-lg p-6">
+              <h3 class="font-semibold text-text-brand-dark mb-2">既存AI基盤から利用するもの</h3>
+              <p class="text-text-dark text-sm leading-relaxed">LLM（要約・レポート生成）とチャットUI（解析結果を自然言語で検索）は、既存のFUJI RAGをそのまま利用します。将来的には、音声解析の結果をRAGに登録し、既存のチャット画面から検索できるようにする予定です。</p>
+            </div>
+            <div class="bg-base-light-gray rounded-lg p-6">
+              <h3 class="font-semibold text-text-brand-dark mb-2">ボイテキ２！側で完結するもの</h3>
+              <p class="text-text-dark text-sm leading-relaxed">音声の取り込み、文字起こし・感情解析の制御、解析結果の保存、一覧・詳細のAPI、音声の再生配信などは、ボイテキ２！専用のデータベースとストレージで完結させます。既存のAI基盤のデータベースには触れません。</p>
+            </div>
+            <div class="bg-base-light-gray rounded-lg p-6">
+              <h3 class="font-semibold text-text-brand-dark mb-2">既存システムに影響を与えない取り決め</h3>
+              <p class="text-text-dark text-sm leading-relaxed">別のDockerプロジェクト名・別ポートで起動し、既存のAI基盤の設定は変更しない方針にしています。「既存をいじらず、必要な機能だけを追加する」ことを意識した構成です。</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">環境</span>
+            コンテナ化とオンプレサーバー
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">今回の構成では、アプリケーションに加え、<strong>データベースやオブジェクトストレージ（S3互換）、文字起こし・感情解析エンジンもコンテナ化</strong>する方針としています。これにより、再現性の確保やリソースの分離、バージョン管理がしやすくなります。</p>
+          <p class="text-text-dark leading-relaxed mb-8">本番環境では、AI推論や音声処理に適したオンプレサーバーを想定しており、クローズドネットワーク内で音声の取り込みから解析・要約・チャット連携までが完結する構成を目指しています。<a href="/news/3" class="text-accent-gold hover:text-brand font-medium underline">前回ご紹介したRAG型AI基盤</a>と同一のネットワーク上で動作させ、社内データを外部に送信しない運用を前提としています。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">セキュリティ</span>
+            セキュリティ・アクセス制御
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">企業環境で音声分析を導入する際には、<strong>どのデータを誰が参照できるか</strong>の制御が重要です。今回の設計では、次のような仕組みを取り入れています。</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li>ユーザーの<strong>ロール（役割）</strong>に応じたアクセス制御</li>
+            <li><strong>役割別レンズ</strong>による表示内容の切り替え（経営者向け・営業向け・品質管理向けなど）</li>
+            <li>音声の<strong>再生のみ許可</strong>し、ダウンロードは提供しない方針（情報漏洩リスクの低減）</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">これにより、セキュリティ要件を満たしつつ、部署や役割に応じた音声データの活用を目指しています。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">実務</span>
+            設計で意識していること
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">音声分析システムの構築では、<strong>文字起こしや感情解析の精度</strong>に加え、<strong>既存のAI基盤との連携のしやすさ</strong>が実務上重要になります。今回の設計では、次の点を意識しています。</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li>文字起こし（Whisper系）や感情解析エンジンは<strong>別コンテナ</strong>として用意し、必要に応じてモデルの差し替えやスケール調整がしやすい構成にする</li>
+            <li>解析結果の<strong>状態管理</strong>（処理中・完了・一部失敗など）を明確にし、運用時の確認や再実行がしやすいようにする</li>
+            <li>画面は<strong>モダンなデザイン</strong>と<strong>レスポンシブ対応</strong>を必須とし、発話・感情グラフ・音声再生が連動する<strong>3ペイン構成</strong>で、効率的な確認ができるようにする</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">これらの方針をもとに、実務で使いやすい音声分析基盤の実装を進めていく予定です。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">今後</span>
+            今後の展開
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">株式会社ノウデルでは、今回の取り組みを通じて以下のテーマに取り組んでいきます。</p>
+          <ul class="list-disc pl-6 mb-6 space-y-2 text-text-dark">
+            <li>クローズド環境での<strong>音声分析とRAG型AI基盤の連携</strong></li>
+            <li>役割別レンズや感情イベントを活かした<strong>業務向けレポート・ダッシュボード</strong>の拡充</li>
+            <li>文字起こし・感情解析の<strong>コンテナ化と運用の安定化</strong></li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">音声・会話データの活用は、コールセンターや営業、人事・研修など、多くの業務領域でニーズが高まっています。その中でも、社内データを外部に送信せず、既存のAI基盤と連携して活用できる環境は、企業にとって重要なテーマの一つです。株式会社ノウデルでは、引き続きクローズド環境に適したAI・音声活用の研究・開発を進め、実務で使える基盤の構築を目指していきます。</p>
+
+          <div class="bg-base-light-gray border border-gray-200 rounded-lg p-6 my-8">
+            <h3 class="text-lg font-semibold text-text-brand-dark mb-3">関連記事</h3>
+            <a href="/news/3" class="flex items-center p-4 bg-base-white border border-gray-200 rounded-lg hover:border-brand transition-colors group">
+              <span class="bg-brand text-white px-2 py-1 rounded text-xs font-medium mr-3">RAG</span>
+              <span class="text-accent-gold group-hover:text-brand font-medium">クローズドネットワーク環境でのRAG型AI基盤の構築を開始</span>
+              <span class="ml-auto text-gray-500">→</span>
+            </a>
+          </div>
+
+          <div class="bg-gradient-to-r from-brand to-brand-dark text-white rounded-lg p-6 my-8 text-center">
+            <h3 class="text-lg font-semibold mb-2">お気軽にご相談ください</h3>
+            <p class="text-white">クローズド環境での音声分析・AI基盤連携のご検討は、ぜひお気軽にご相談ください。</p>
             <a href="/contact" class="inline-block mt-4 bg-white text-brand font-semibold py-2 px-6 rounded-lg hover:bg-accent-gold transition-colors">お問い合わせ</a>
           </div>
         </div>
