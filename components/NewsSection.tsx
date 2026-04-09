@@ -1,6 +1,13 @@
 export default function NewsSection() {
   const news = [
     {
+      id: 5,
+      title: 'FUJIRAGの開発を担当 — 音声データ活用とRAG技術を融合した新たな取り組み',
+      date: '2026.04.09',
+      category: 'お知らせ',
+      excerpt: '音声・会話データの活用課題に対し、音声認識・要約・ナレッジ検索を統合したRAG型AIシステム「FUJIRAG」の開発を担当しました。'
+    },
+    {
       id: 4,
       title: 'クローズド環境で音声分析とAI基盤を連携させる取り組みを開始',
       date: '2026.03.10',
@@ -14,13 +21,6 @@ export default function NewsSection() {
       category: 'お知らせ',
       excerpt: '社内データを外部に送信せず、クローズド環境で利用可能なRAG型AI基盤の構築に取り組んでいます。社内ナレッジを活用するAIアシスタントの実現を目指します。'
     },
-    {
-      id: 1,
-      title: 'KTGS社「ボイテキ！クライアント」iPhoneアプリ正式リリース｜ノウデルが開発を担当',
-      date: '2025.09.25',
-      category: 'お知らせ',
-      excerpt: '株式会社ノウデル（本社：東京都中野区）は、2025年9月25日にケーティージーエス合同会社（以下KTGS）より正式リリースされたiPhoneアプリ「ボイテキ！クライアント」の開発を担当いたしました。'
-    }
   ]
 
   return (

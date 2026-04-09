@@ -8,7 +8,8 @@ export async function generateStaticParams() {
     { id: '1' },
     { id: '2' },
     { id: '3' },
-    { id: '4' }
+    { id: '4' },
+    { id: '5' }
   ]
 }
 
@@ -16,6 +17,74 @@ export default async function NewsArticle({ params }: { params: Promise<{ id: st
   const { id } = await params
   
   const newsData = {
+    '5': {
+      id: 5,
+      title: 'FUJIRAGの開発を担当 — 音声データ活用とRAG技術を融合した新たな取り組み',
+      date: '2026.04.09',
+      category: 'お知らせ',
+      content: `
+        <div class="prose prose-lg max-w-none">
+          <p class="text-lg text-text-dark leading-relaxed mb-6">— 株式会社ノウデルのAI活用への取り組み —</p>
+          <p class="text-text-dark leading-relaxed mb-8">近年、生成AIやRAG（Retrieval-Augmented Generation）技術の進展により、企業内のナレッジ活用や情報検索の高度化が急速に進んでいます。一方で、コールセンターや営業活動において蓄積される音声・会話データの活用は、依然として多くの企業にとって課題となっています。</p>
+
+          <p class="text-text-dark leading-relaxed mb-4">音声データには、顧客のニーズや現場の知見が多く含まれているものの、</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li>必要な情報を即座に検索・活用できない</li>
+            <li>ナレッジとして体系化されていない</li>
+            <li>AIと連携した高度な活用が難しい</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">といった課題が存在します。こうした背景のもと、株式会社ノウデルでは、音声解析技術とRAG基盤を融合した新たな取り組みとして、<strong class="text-brand">FUJIRAG</strong>の開発を担当いたしました。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">概要</span>
+            FUJIRAGについて
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-8">FUJIRAGは、音声・テキストデータを横断的に活用し、必要な情報へ迅速にアクセスできるRAG型AIシステムです。音声認識・要約・ナレッジ検索といった複数の技術を統合することで、会話データのナレッジ化、必要な情報の即時検索、業務支援へのAI活用を実現します。</p>
+          <p class="text-text-dark leading-relaxed mb-8">また、ノウデルがこれまで培ってきた音声解析およびAI基盤構築のノウハウを活かし、実運用を見据えた構成で設計・開発を行いました。</p>
+
+          <div class="bg-base-light-gray border border-gray-200 rounded-lg p-6 my-8">
+            <h3 class="text-lg font-semibold text-text-brand-dark mb-4">サービスサイト</h3>
+            <a href="https://fujirag.voitex.biz/" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-base-white border border-gray-200 rounded-lg hover:border-brand transition-colors group shadow-sm">
+              <span class="bg-brand text-white px-2 py-1 rounded text-xs font-medium mr-3">FUJIRAG</span>
+              <span class="text-accent-gold group-hover:text-brand font-medium">FUJIRAG サービスサイト</span>
+              <span class="ml-auto text-gray-500 group-hover:text-gray-400">↗</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">技術</span>
+            技術的な特徴
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">FUJIRAGでは、以下の技術要素を組み合わせています。</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li>音声データの文字起こしおよび構造化</li>
+            <li>要約・分析による情報の整理</li>
+            <li>RAGによるナレッジ検索の高度化</li>
+            <li>Webインターフェースによる直感的な利用</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">これにより、従来は活用が難しかった音声データを、企業の意思決定や業務改善に活かすことが可能となります。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">今後</span>
+            今後の展開
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">株式会社ノウデルでは、FUJIRAGの開発を通じて、音声データとAIを組み合わせた実用的なソリューションの提供をさらに強化してまいります。</p>
+          <p class="text-text-dark leading-relaxed mb-4">今後は、</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li>より高度なナレッジ検索機能の拡張</li>
+            <li>企業環境に応じたカスタマイズ対応</li>
+            <li>AI活用基盤とのさらなる連携</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-8">などを推進し、現場で「使えるAI」の実現を目指してまいります。</p>
+
+          <div class="bg-gradient-to-r from-brand to-brand-dark text-white rounded-lg p-6 my-8 text-center">
+            <h3 class="text-lg font-semibold mb-2">お問い合わせ</h3>
+            <p class="text-white">FUJIRAGおよびAI基盤開発に関するご相談は、お気軽にお問い合わせください。</p>
+            <a href="/contact" class="inline-block mt-4 bg-white text-brand font-semibold py-2 px-6 rounded-lg hover:bg-accent-gold transition-colors">お問い合わせ</a>
+          </div>
+        </div>
+      `
+    },
     '1': {
       id: 1,
       title: 'KTGS社「ボイテキ！クライアント」iPhoneアプリ正式リリース｜ノウデルが開発を担当',

@@ -105,6 +105,131 @@ export default function WorkSection() {
             </h3>
             <p className="text-lg text-text-dark">お客様と共に創り上げたプロダクト</p>
           </div>
+
+          {/* FUJIRAG */}
+          <div className="bg-gradient-to-r from-brand/5 to-accent-gold/5 rounded-2xl shadow-lg overflow-hidden border border-brand/20 mb-10">
+            <div className="bg-gradient-to-r from-brand to-brand-dark p-8 text-white">
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-white/20 rounded-full mr-6">
+                  <Brain className="w-12 h-12" />
+                </div>
+                <div>
+                  <h4 className="text-3xl font-bold mb-2">FUJIRAG</h4>
+                  <p className="text-xl text-white/90">音声データ活用 × RAG型AIシステム</p>
+                  <p className="text-sm text-white/80 mt-2">音声解析技術とRAG基盤を融合した取り組み</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <span className="bg-accent-gold text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  RAG / AI
+                </span>
+                <a
+                  href="https://fujirag.voitex.biz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                >
+                  サービスサイト
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            </div>
+
+            <div className="p-8">
+              <div className="grid lg:grid-cols-2 gap-8">
+                <div>
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">プロジェクト概要</h5>
+                  <p className="text-text-dark mb-6 leading-relaxed">
+                    音声・会話データを横断的に活用し、必要な情報へ迅速にアクセスできるRAG型AIシステム「FUJIRAG」の設計・開発を担当。
+                    音声認識・要約・ナレッジ検索を統合し、会話データのナレッジ化と業務支援へのAI活用を実現します。
+                  </p>
+
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">主な特徴</h5>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      音声データの文字起こし・構造化
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      要約・分析による情報整理
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      RAGによるナレッジ検索の高度化
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      Webインターフェースでの直感的な利用
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">技術領域</h5>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Mic className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">音声活用</h6>
+                      <p className="text-xs text-text-dark">音声→テキスト・構造化</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Brain className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">生成AI</h6>
+                      <p className="text-xs text-text-dark">要約・分析</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Zap className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">RAG</h6>
+                      <p className="text-xs text-text-dark">ナレッジ検索</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Cloud className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">基盤構築</h6>
+                      <p className="text-xs text-text-dark">運用を見据えた設計</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://fujirag.voitex.biz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex items-center justify-center"
+                  >
+                    サービスサイトを見る
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                  <a
+                    href="/news/5"
+                    className="btn-secondary"
+                  >
+                    お知らせを見る
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           
           {/* KTGS合同会社 ボイテキ！クライアント */}
           <div className="bg-gradient-to-r from-brand/5 to-accent-gold/5 rounded-2xl shadow-lg overflow-hidden border border-brand/20">
