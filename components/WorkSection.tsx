@@ -106,6 +106,132 @@ export default function WorkSection() {
             <p className="text-lg text-text-dark">お客様と共に創り上げたプロダクト</p>
           </div>
 
+          {/* 株式会社HLC モニタリング報告書AI生成支援システム */}
+          <div className="bg-gradient-to-r from-brand/5 to-accent-gold/5 rounded-2xl shadow-lg overflow-hidden border border-brand/20 mb-10">
+            <div className="bg-gradient-to-r from-brand to-brand-dark p-8 text-white">
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-white/20 rounded-full mr-6">
+                  <FileText className="w-12 h-12" />
+                </div>
+                <div>
+                  <h4 className="text-3xl font-bold mb-2">モニタリング報告書AI生成支援システム</h4>
+                  <p className="text-xl text-white/90">AIが下書き、人が確定──モニタリング報告書作成支援</p>
+                  <p className="text-sm text-white/80 mt-2">クライアント: 株式会社HLC（リハビリ特化型デイサービス「ソレイルミナーレ」運営）</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <span className="bg-accent-gold text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  AI / 介護DX
+                </span>
+                <a
+                  href="https://s-hlc.co.jp/news/news20260330/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                >
+                  HLC公式お知らせ
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            </div>
+
+            <div className="p-8">
+              <div className="grid lg:grid-cols-2 gap-8">
+                <div>
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">プロジェクト概要</h5>
+                  <p className="text-text-dark mb-6 leading-relaxed">
+                    介護記録データをもとにAIがモニタリング報告書の下書きを自動生成し、スタッフが最終確認・修正・確定を行う「人間中心のAI活用」を実現するシステムの開発を担当。「AIは下書き限定、最終確定は人間が担当」という安全設計により、業務効率化と記録品質の両立を実現します。
+                  </p>
+
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">主な特徴</h5>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      介護記録データからのAI下書き生成
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      報告書作成時間を20〜30%短縮（最大50%短縮ケースも）
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      ヒューマンインザループ設計による品質担保
+                    </li>
+                    <li className="flex items-center text-text-dark">
+                      <span className="w-2 h-2 bg-brand rounded-full mr-3"></span>
+                      1件10〜15分の手入力作業を削減
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 className="text-xl font-semibold text-text-brand-dark mb-4">技術領域</h5>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Brain className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">生成AI</h6>
+                      <p className="text-xs text-text-dark">下書き自動生成</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Zap className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">データ連携</h6>
+                      <p className="text-xs text-text-dark">介護記録の構造化</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Award className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">ヒューマンインザループ</h6>
+                      <p className="text-xs text-text-dark">人による最終確定</p>
+                    </div>
+                    <div className="bg-base-light-gray rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                      <div className="flex justify-center mb-2">
+                        <div className="p-2 bg-brand rounded-full">
+                          <Cloud className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <h6 className="font-semibold text-text-dark text-sm mb-1">クラウド基盤</h6>
+                      <p className="text-xs text-text-dark">スケール対応設計</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://s-hlc.co.jp/news/news20260330/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex items-center justify-center"
+                  >
+                    HLC公式お知らせを見る
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                  <a
+                    href="https://newscast.jp/smart/news/3509912"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                  >
+                    プレスリリースを見る
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* FUJIRAG */}
           <div className="bg-gradient-to-r from-brand/5 to-accent-gold/5 rounded-2xl shadow-lg overflow-hidden border border-brand/20 mb-10">
             <div className="bg-gradient-to-r from-brand to-brand-dark p-8 text-white">
