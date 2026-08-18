@@ -6,7 +6,7 @@ export default function CompanySection() {
     founded: '2023年8月',
     ceo: '代表取締役 片ケ瀬敏夫',
     address: '〒164-0001 東京都中野区中野4-6-10-102',
-    phone: '050-8882-5857',
+    phone: '050-5538-5287',
     business: 'アプリケーションソフトの企画、制作',
     mission: '学び。提供。それが株式会社ノウデル の使命です。',
     philosophy: '財産である人材を尊重し、技術をもってお客様の情報基盤を支える',

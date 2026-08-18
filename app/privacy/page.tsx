@@ -203,7 +203,7 @@ export default function PrivacyPolicy() {
                     苦情やご相談については、以下の連絡先までお問い合わせください。
                   </p>
                   <div className="text-sm text-text-dark">
-                    <p>電話番号: 050-8882-5857</p>
+                    <p>電話番号: 050-5538-5287</p>
                     <p>メールアドレス: info@knowdel.jp</p>
                   </div>
                 </div>
