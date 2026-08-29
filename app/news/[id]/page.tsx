@@ -9,7 +9,8 @@ export async function generateStaticParams() {
     { id: '2' },
     { id: '3' },
     { id: '4' },
-    { id: '5' }
+    { id: '5' },
+    { id: '6' }
   ]
 }
 
@@ -17,6 +18,101 @@ export default async function NewsArticle({ params }: { params: Promise<{ id: st
   const { id } = await params
   
   const newsData = {
+    '6': {
+      id: 6,
+      title: '完全クローズド環境で動くAI基盤「ROOTA」の開発を担当',
+      date: '2026.07.31',
+      category: 'お知らせ',
+      content: `
+        <div class="prose prose-lg max-w-none">
+          <p class="text-lg text-text-dark leading-relaxed mb-6">— 株式会社ノウデルのAI活用への取り組み —</p>
+          <p class="text-text-dark leading-relaxed mb-8">2026年3月に着手した、クローズドネットワーク環境で動作するRAG型AI基盤の構築が、製品<strong class="text-brand">「ROOTA（ルータ）」</strong>として形になりました。当社は本製品の企画・開発を担当しています。</p>
+          <p class="text-text-dark leading-relaxed mb-8">社内の規程やマニュアルをAIに読ませたい。けれども、その情報を外部のサービスへ送ることはできない。この2つを同時に満たすことが、開発の出発点でした。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">設計</span>
+            データを「学習させない」のではなく、「渡さない」
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">クラウドのAIサービスでは、「入力データを学習に使わない」という設定が用意されていることがあります。しかしそれは、データが通った上での取り決めにすぎません。</p>
+          <p class="text-text-dark leading-relaxed mb-4">ROOTAは、そもそもデータを外に出しません。入力・回答・会話履歴・学習させた文書と、そこから作られる検索用データまで、すべてお客様の社内ネットワークの中に留まります。外部のAIサービスやAPIへの送信はありません。</p>
+          <p class="text-text-dark leading-relaxed mb-8">利用状況を外部へ送る仕組みも無効にし、画面表示に使うフォントやアイコンまで製品内に同梱しました。外部のCDNからも読み込みません。<strong>通信そのものが発生しない構成</strong>にすることで、「設定を間違えると漏れる」という状態をなくしています。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">分離</span>
+            部門やグループ会社ごとに、構造で分ける
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">複数の部門やグループ会社で同じ基盤を使う場合、互いのデータが見えてはいけません。</p>
+          <p class="text-text-dark leading-relaxed mb-4">ROOTAでは、会話履歴・学習させた文書・利用者情報を、運用に合わせた単位ごとに分離しています。データベースは行レベルセキュリティで保護し、文書の検索領域も単位ごとに分けているため、<strong>他の単位の文書が回答や引用に混ざることは構造上起きません</strong>。</p>
+          <p class="text-text-dark leading-relaxed mb-4">この点は自動テストと実機の両方で検証しています。設定の書き方で守るのではなく、仕組みとして成立することを重視しました。</p>
+          <p class="text-text-dark leading-relaxed mb-8">また、管理者が利用状況を把握できる一方で、<strong>会話の本文は管理者にも見えない</strong>設計にしています。「使われているのは知りたいが、中身は見せたくない」という運用実態に合わせたものです。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">構成</span>
+            社内のサーバーだけで完結する
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">ROOTAは、お客様の社内ネットワークに置いたサーバー群だけで動きます。</p>
+          <p class="text-text-dark leading-relaxed mb-4">利用者がアクセスするのはROOTAの画面だけで、データベースやAI処理基盤、LLMサーバーに直接つながる経路はありません。すべて社内ネットワークの内側に閉じています。</p>
+          <p class="text-text-dark leading-relaxed mb-4">言語モデルは社内のGPUサーバー上でオープンモデルを動かし、日本語の文書検索には日本語に特化した埋め込みモデルを使っています。どちらも外部のAPIを呼びません。<strong>運用時にインターネット接続を必要としない構成</strong>です。</p>
+          <p class="text-text-dark leading-relaxed mb-8">送付はコンテナ形式にまとめており、お客様の環境の中で組み上がります。検証環境と本番環境で同じものが動くため、動作環境の違いによる不具合を持ち込みません。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">機能</span>
+            検索から、業務エージェントの自作まで
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">開発を進める中で、お客様の関心は「AIと話せること」から「<strong>自分たちの業務そのものを任せること</strong>」へ移っていきました。</p>
+          <p class="text-text-dark leading-relaxed mb-4">そこで、利用者が画面から業務エージェントを組み立てられる機能を用意しました。入力するファイル、処理の手順、出力する形式を画面で並べることで、プログラムを書かずに業務の流れを組めます。</p>
+          <ul class="list-disc pl-6 mb-8 space-y-2 text-text-dark">
+            <li><strong>文書を根拠に回答する</strong> — 社内文書を検索し、どのファイルのどこを見たか示しながら答える</li>
+            <li><strong>帳票を読み取る</strong> — 紙の帳票をスキャンし、様式に沿って項目を取り出す</li>
+            <li><strong>音声を扱う</strong> — 通話や会議の音声を文字にし、内容を確認・修正できる形にする</li>
+            <li><strong>結果をファイルで出す</strong> — 既存の業務システムに取り込める形式で出力する</li>
+          </ul>
+          <p class="text-text-dark leading-relaxed mb-4">社内文書はPDF・Word・Excel・PowerPointなど主要な形式に対応し、画像を添付して質問することもできます。回答はWordやPDFとしてそのまま持ち出せます。</p>
+          <p class="text-text-dark leading-relaxed mb-4">ここで重視したのは、<strong>業務ごとの違いを設定データ側に置く</strong>ことです。帳票の様式や、出力する項目をコードではなく設定として持ちます。そのため、別の業務に広げるときにプログラムを書き換える必要がありません。</p>
+          <p class="text-text-dark leading-relaxed mb-8">実際に、性質の異なる複数の業務エージェントが同じ基盤の上で動いています。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">品質</span>
+            検索の精度を、測りながら作る
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">社内文書を根拠に回答する仕組みは、「それらしく答える」を返すだけでは実務で使えません。根拠として引いた文書がずれれば、利用者が引用元を開いたときに無関係な内容が出てきます。</p>
+          <p class="text-text-dark leading-relaxed mb-4">そこで開発では、<strong>あらかじめ正解を用意した問いの集合を作り、変更のたびに採点する</strong>方法を採りました。「資料に書かれていない問い」も意図的に含め、<strong>答えられないときに答えないこと</strong>も測っています。</p>
+          <p class="text-text-dark leading-relaxed mb-4">閾値の調整や検索方式の変更は、この採点結果を見ながら進めています。感応ではなく数字で判断できるようにしたことで、改善を積み上げられるようになりました。</p>
+          <p class="text-text-dark leading-relaxed mb-8">この過程では、思ったどおりにならなかったことも記録に残しています。検索の閾値を上げれば精度が上がると考えていたものの、実際には利用者の問いかけの言葉と文書の中の言葉が噛み合っていないことが原因だった、といった事例です。<strong>原因を取り違えたまま調整を重ねない</strong>ためにも、測定と記録を欠かさない方針をとっています。</p>
+
+          <h2 class="text-2xl font-bold text-text-brand-dark mt-12 mb-6 flex items-center">
+            <span class="bg-brand text-white px-3 py-1 rounded text-sm font-medium mr-4">今後</span>
+            業務ごとのエージェントを増やす
+          </h2>
+          <p class="text-text-dark leading-relaxed mb-4">基盤としての形は整いました。今後は、実際の業務に合わせたエージェントを増やしていきます。</p>
+          <p class="text-text-dark leading-relaxed mb-4">紙の帳票を業務システムへ取り込む工程や、大量の書類を読んで報告書の下書きを作る工程など、<strong>人手で時間がかかっていた作業</strong>から順に取り組んでいます。</p>
+          <p class="text-text-dark leading-relaxed mb-8">いずれも、担当者の判断を置き換えるものではありません。<strong>根拠を示し、下書きを用意し、人が確認して直す</strong>という形を基本にしています。最終的な判断と責任は、あくまでどこまでも担当者に残ります。</p>
+          <p class="text-text-dark leading-relaxed mb-8">当社は引き続き、ROOTAの開発を担当してまいります。</p>
+
+          <div class="bg-base-light-gray border border-gray-200 rounded-lg p-6 my-8">
+            <h3 class="text-lg font-semibold text-text-brand-dark mb-3">関連記事</h3>
+            <div class="space-y-3">
+              <a href="/news/3" class="flex items-center p-4 bg-base-white border border-gray-200 rounded-lg hover:border-brand transition-colors group">
+                <span class="bg-brand text-white px-2 py-1 rounded text-xs font-medium mr-3">RAG</span>
+                <span class="text-accent-gold group-hover:text-brand font-medium">クローズドネットワーク環境でのRAG型AI基盤の構築を開始</span>
+                <span class="ml-auto text-gray-500">→</span>
+              </a>
+              <a href="/news/4" class="flex items-center p-4 bg-base-white border border-gray-200 rounded-lg hover:border-brand transition-colors group">
+                <span class="bg-brand text-white px-2 py-1 rounded text-xs font-medium mr-3">音声</span>
+                <span class="text-accent-gold group-hover:text-brand font-medium">クローズド環境で音声分析とAI基盤を連携させる取り組みを開始</span>
+                <span class="ml-auto text-gray-500">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-brand to-brand-dark text-white rounded-lg p-6 my-8 text-center">
+            <h3 class="text-lg font-semibold mb-2">お気軽にご相談ください</h3>
+            <p class="text-white">クローズド環境でのAI基盤・業務エージェントのご検討は、ぜひお気軽にご相談ください。</p>
+            <a href="/contact" class="inline-block mt-4 bg-white text-brand font-semibold py-2 px-6 rounded-lg hover:bg-accent-gold transition-colors">お問い合わせ</a>
+          </div>
+        </div>
+      `
+    },
     '5': {
       id: 5,
       title: 'FUJIRAGの開発を担当 — 音声データ活用とRAG技術を融合した新たな取り組み',

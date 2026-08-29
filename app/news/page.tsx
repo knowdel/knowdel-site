@@ -4,6 +4,16 @@ import { Calendar, ArrowLeft, Newspaper, Clock, Tag } from 'lucide-react'
 export default function News() {
   const news = [
     {
+      id: 6,
+      title: '完全クローズド環境で動くAI基盤「ROOTA」の開発を担当',
+      date: '2026.07.31',
+      category: 'お知らせ',
+      content: '2026年3月に着手したクローズド環境向けRAG型AI基盤が、製品「ROOTA（ルータ）」として形になりました。当社は本製品の企画・開発を担当しています。',
+      excerpt: '入力・回答・会話履歴・検索用データまでをすべて社内に留め、外部APIへの送信を行わないAI基盤「ROOTA（ルータ）」の開発を担当しました。部門・グループ会社ごとのデータ分離、画面から組める業務エージェント、検索精度の継続的な評価までを含めて設計しています。',
+      readTime: '7分で読める',
+      featured: true
+    },
+    {
       id: 5,
       title: 'FUJIRAGの開発を担当 — 音声データ活用とRAG技術を融合した新たな取り組み',
       date: '2026.04.09',
@@ -11,7 +21,7 @@ export default function News() {
       content: '株式会社ノウデルでは、音声解析技術とRAG基盤を融合した新たな取り組みとして、FUJIRAGの開発を担当いたしました。',
       excerpt: '生成AIやRAG技術の進展が進む一方で、コールセンターや営業活動で蓄積される音声・会話データの活用は依然として課題です。ノウデルは音声解析とRAG基盤を融合したRAG型AIシステム「FUJIRAG」の開発を担当し、音声認識・要約・ナレッジ検索を統合した業務支援を実現します。',
       readTime: '5分で読める',
-      featured: true
+      featured: false
     },
     {
       id: 4,

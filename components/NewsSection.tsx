@@ -1,6 +1,13 @@
 export default function NewsSection() {
   const news = [
     {
+      id: 6,
+      title: '完全クローズド環境で動くAI基盤「ROOTA」の開発を担当',
+      date: '2026.07.31',
+      category: 'お知らせ',
+      excerpt: 'クローズド環境向けRAG型AI基盤が製品「ROOTA（ルータ）」として形に。データを外に出さない構成、部門ごとの分離、業務エージェントの自作までを担当しました。'
+    },
+    {
       id: 5,
       title: 'FUJIRAGの開発を担当 — 音声データ活用とRAG技術を融合した新たな取り組み',
       date: '2026.04.09',
@@ -13,13 +20,6 @@ export default function NewsSection() {
       date: '2026.03.10',
       category: 'お知らせ',
       excerpt: 'RAG型AI基盤と音声分析「ボイテキ２！」を同一環境で連携。音声を社外に出さず、文字起こし・感情解析・要約を社内で完結させる取り組みをご紹介します。'
-    },
-    {
-      id: 3,
-      title: 'クローズドネットワーク環境でのRAG型AI基盤の構築を開始',
-      date: '2026.03.07',
-      category: 'お知らせ',
-      excerpt: '社内データを外部に送信せず、クローズド環境で利用可能なRAG型AI基盤の構築に取り組んでいます。社内ナレッジを活用するAIアシスタントの実現を目指します。'
     },
   ]
 
